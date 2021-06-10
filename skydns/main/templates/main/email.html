@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <title>Test work</title>
+</head>
+    <body>
+        <form method="post" action="{% url 'email' %}" id="emailForm">
+            {% csrf_token %}
+            <div>
+                {{ form }}
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+    </body>
+</html>
